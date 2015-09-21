@@ -775,7 +775,7 @@ func (p *TRegionInfo) writeField5(oprot thrift.TProtocol) (err error) {
 	if err := oprot.WriteFieldBegin("version", thrift.BYTE, 5); err != nil {
 		return fmt.Errorf("%T write field begin error 5:version: %s", p, err)
 	}
-	if err := oprot.WriteByte(byte(p.Version)); err != nil {
+	if err := oprot.WriteByte(int8(p.Version)); err != nil {
 		return fmt.Errorf("%T.version (5) field write error: %s", p, err)
 	}
 	if err := oprot.WriteFieldEnd(); err != nil {
@@ -1575,7 +1575,7 @@ func (p *TRowResult_) ReadField2(iprot thrift.TProtocol) error {
 			return fmt.Errorf("error reading field 0: %s", err)
 		} else {
 			temp := Text(v)
-			_key1 = temp
+			_key1 = temp.String()
 		}
 		_val2 := &TCell{}
 		if err := _val2.Read(iprot); err != nil {

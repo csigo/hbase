@@ -1,0 +1,271 @@
+diff --git a/experiment/hsinho/hbase112/hbase.go b/experiment/hsinho/hbase112/hbase.go
+index c0d596f..b6ebdae 100644
+--- a/experiment/hsinho/hbase112/hbase.go
++++ b/experiment/hsinho/hbase112/hbase.go
+@@ -7851,7 +7851,7 @@ func (p *GetColumnDescriptorsResult) ReadField0(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key98 = temp
++			_key98 = temp.String()
+ 		}
+ 		_val99 := &ColumnDescriptor{
+ 			MaxVersions: 3,
+@@ -8832,7 +8832,7 @@ func (p *GetArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key102 = temp
++			_key102 = temp.String()
+ 		}
+ 		var _val103 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -9234,7 +9234,7 @@ func (p *GetVerArgs) ReadField5(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key105 = temp
++			_key105 = temp.String()
+ 		}
+ 		var _val106 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -9670,7 +9670,7 @@ func (p *GetVerTsArgs) ReadField6(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key108 = temp
++			_key108 = temp.String()
+ 		}
+ 		var _val109 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -10067,7 +10067,7 @@ func (p *GetRowArgs) ReadField3(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key111 = temp
++			_key111 = temp.String()
+ 		}
+ 		var _val112 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -10448,7 +10448,7 @@ func (p *GetRowWithColumnsArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key115 = temp
++			_key115 = temp.String()
+ 		}
+ 		var _val116 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -10839,7 +10839,7 @@ func (p *GetRowTsArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key118 = temp
++			_key118 = temp.String()
+ 		}
+ 		var _val119 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -11254,7 +11254,7 @@ func (p *GetRowWithColumnsTsArgs) ReadField5(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key122 = temp
++			_key122 = temp.String()
+ 		}
+ 		var _val123 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -11656,7 +11656,7 @@ func (p *GetRowsArgs) ReadField3(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key126 = temp
++			_key126 = temp.String()
+ 		}
+ 		var _val127 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -12058,7 +12058,7 @@ func (p *GetRowsWithColumnsArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key131 = temp
++			_key131 = temp.String()
+ 		}
+ 		var _val132 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -12470,7 +12470,7 @@ func (p *GetRowsTsArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key135 = temp
++			_key135 = temp.String()
+ 		}
+ 		var _val136 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -12906,7 +12906,7 @@ func (p *GetRowsWithColumnsTsArgs) ReadField5(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key140 = temp
++			_key140 = temp.String()
+ 		}
+ 		var _val141 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -13334,7 +13334,7 @@ func (p *MutateRowArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key144 = temp
++			_key144 = temp.String()
+ 		}
+ 		var _val145 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -13739,7 +13739,7 @@ func (p *MutateRowTsArgs) ReadField5(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key147 = temp
++			_key147 = temp.String()
+ 		}
+ 		var _val148 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -14121,7 +14121,7 @@ func (p *MutateRowsArgs) ReadField3(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key150 = temp
++			_key150 = temp.String()
+ 		}
+ 		var _val151 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -14489,7 +14489,7 @@ func (p *MutateRowsTsArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key153 = temp
++			_key153 = temp.String()
+ 		}
+ 		var _val154 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -15244,7 +15244,7 @@ func (p *DeleteAllArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key155 = temp
++			_key155 = temp.String()
+ 		}
+ 		var _val156 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -15585,7 +15585,7 @@ func (p *DeleteAllTsArgs) ReadField5(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key157 = temp
++			_key157 = temp.String()
+ 		}
+ 		var _val158 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -15905,7 +15905,7 @@ func (p *DeleteAllRowArgs) ReadField3(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key159 = temp
++			_key159 = temp.String()
+ 		}
+ 		var _val160 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -16610,7 +16610,7 @@ func (p *DeleteAllRowTsArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key162 = temp
++			_key162 = temp.String()
+ 		}
+ 		var _val163 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -16921,7 +16921,7 @@ func (p *ScannerOpenWithScanArgs) ReadField3(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key164 = temp
++			_key164 = temp.String()
+ 		}
+ 		var _val165 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -17287,7 +17287,7 @@ func (p *ScannerOpenArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key167 = temp
++			_key167 = temp.String()
+ 		}
+ 		var _val168 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -17696,7 +17696,7 @@ func (p *ScannerOpenWithStopArgs) ReadField5(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key170 = temp
++			_key170 = temp.String()
+ 		}
+ 		var _val171 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -18102,7 +18102,7 @@ func (p *ScannerOpenWithPrefixArgs) ReadField4(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key173 = temp
++			_key173 = temp.String()
+ 		}
+ 		var _val174 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -18510,7 +18510,7 @@ func (p *ScannerOpenTsArgs) ReadField5(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key176 = temp
++			_key176 = temp.String()
+ 		}
+ 		var _val177 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -18953,7 +18953,7 @@ func (p *ScannerOpenWithStopTsArgs) ReadField6(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key179 = temp
++			_key179 = temp.String()
+ 		}
+ 		var _val180 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+@@ -20745,7 +20745,7 @@ func (p *CheckAndPutArgs) ReadField7(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key184 = temp
++			_key184 = temp.String()
+ 		}
+ 		var _val185 Text
+ 		if v, err := iprot.ReadBinary(); err != nil {
+diff --git a/experiment/hsinho/hbase112/patch.go b/experiment/hsinho/hbase112/patch.go
+new file mode 100644
+index 0000000..fcfac86
+--- /dev/null
++++ b/experiment/hsinho/hbase112/patch.go
+@@ -0,0 +1,5 @@
++package hbase
++
++func (t Text) String() string {
++	return string(t)
++}
+diff --git a/experiment/hsinho/hbase112/ttypes.go b/experiment/hsinho/hbase112/ttypes.go
+index 1ea726b..467861c 100644
+--- a/experiment/hsinho/hbase112/ttypes.go
++++ b/experiment/hsinho/hbase112/ttypes.go
+@@ -1575,7 +1575,7 @@ func (p *TRowResult_) ReadField2(iprot thrift.TProtocol) error {
+ 			return fmt.Errorf("error reading field 0: %s", err)
+ 		} else {
+ 			temp := Text(v)
+-			_key1 = temp
++			_key1 = temp.String()
+ 		}
+ 		_val2 := &TCell{}
+ 		if err := _val2.Read(iprot); err != nil {
